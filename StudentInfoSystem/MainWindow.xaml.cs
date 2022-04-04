@@ -30,7 +30,15 @@ namespace StudentInfoSystem
 
         public void ClearAllFields()
         {
-            foreach(var control in MainGrid.Children)
+            foreach(var control in personalInfoGrid.Children)
+            {
+                if (control is TextBox txtBox)
+                {
+                    txtBox.Text = String.Empty;
+                }
+            }
+
+            foreach (var control in studentInfoGrid.Children)
             {
                 if (control is TextBox txtBox)
                 {
@@ -56,7 +64,15 @@ namespace StudentInfoSystem
 
         public void DisableAllInput()
         {
-            foreach (var control in MainGrid.Children)
+            foreach (var control in personalInfoGrid.Children)
+            {
+                if (control is TextBox txtBox)
+                {
+                    txtBox.IsEnabled = false;
+                }
+            }
+
+            foreach (var control in studentInfoGrid.Children)
             {
                 if (control is TextBox txtBox)
                 {
@@ -67,7 +83,15 @@ namespace StudentInfoSystem
 
         public void EnableAllInput()
         {
-            foreach (var control in MainGrid.Children)
+            foreach (var control in personalInfoGrid.Children)
+            {
+                if (control is TextBox txtBox)
+                {
+                    txtBox.IsEnabled = true;
+                }
+            }
+
+            foreach (var control in studentInfoGrid.Children)
             {
                 if (control is TextBox txtBox)
                 {

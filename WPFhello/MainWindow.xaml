@@ -19,6 +19,13 @@
         <Label x:Name="lblY" Content="y:" HorizontalAlignment="Left" Margin="459,141,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtN" HorizontalAlignment="Left" Margin="482,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
         <TextBox x:Name="txtY" HorizontalAlignment="Left" Margin="482,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <ListBox x:Name="peopleListBox" IsSynchronizedWithCurrentItem="True" SelectionChanged="ListBox_SelectionChanged_1" Margin="444,217,73,119">
+            <ListBoxItem Content="Mike"/>
+            <ListBoxItem Content="John"/>
+            <ListBoxItem Content="Liza"/>
+            <ListBoxItem Content="Mary"/>
+        </ListBox>
+        <Button x:Name="btnShowSelectedPerson" Content="Show Selected" HorizontalAlignment="Left" Margin="646,320,0,0" VerticalAlignment="Top" Click="btnShowSelectedPerson_Click"/>
 
     </Grid>
 </Window>

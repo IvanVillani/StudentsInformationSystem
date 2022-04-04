@@ -8,17 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="profilePicture.png" />
+    <None Remove="watermark.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="profilePicture.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="watermark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\UserLogin\UserLogin.csproj" />
   </ItemGroup>
 
 </Project>

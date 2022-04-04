@@ -23,6 +23,16 @@ namespace WPFhello
         public MainWindow()
         {
             InitializeComponent();
+            ListBoxItem james = new();
+            ListBoxItem david = new();
+
+            james.Content = "James";
+            david.Content = "David";
+
+            peopleListBox.Items.Add(james);
+            peopleListBox.Items.Add(david);
+
+            peopleListBox.SelectedItem = james;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -101,6 +111,21 @@ namespace WPFhello
             {
                 e.Cancel= true;
             }
+        }
+
+        private void btnShowSelectedPerson_Click(object sender, RoutedEventArgs e)
+        {
+            MyMessage myMsgWindow = new MyMessage();
+            myMsgWindow.Show();
+
+            // string greetingMsg;
+            // greetingMsg = (peopleListBox.SelectedItem as ListBoxItem).Content.ToString();
+            // MessageBox.Show("Hi " + greetingMsg);
+        }
+
+        private void ListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

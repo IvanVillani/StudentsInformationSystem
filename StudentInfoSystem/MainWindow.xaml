@@ -5,33 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StudentInfoSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="460" Width="800">
     <Grid x:Name="MainGrid">
-        <Label x:Name="lblFirstName" Content="First Name:" HorizontalAlignment="Left" Margin="44,52,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" Margin="44,83,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblLastName" Content="Last Name:" HorizontalAlignment="Left" Margin="44,114,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblFaculty" Content="Faculty:" HorizontalAlignment="Left" Margin="44,199,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSpeciality" Content="Specality:" HorizontalAlignment="Left" Margin="44,230,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblDegree" Content="Degree:" HorizontalAlignment="Left" Margin="44,261,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblStatus" Content="Status:" HorizontalAlignment="Left" Margin="44,292,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblFakNumber" Content="Fac. Number:" HorizontalAlignment="Left" Margin="44,323,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtFakNumber" HorizontalAlignment="Left" Margin="128,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtStatus" HorizontalAlignment="Left" Margin="128,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtDegree" HorizontalAlignment="Left" Margin="128,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtSpeciality" HorizontalAlignment="Left" Margin="128,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtFaculty" HorizontalAlignment="Left" Margin="128,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="128,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtSurname" HorizontalAlignment="Left" Margin="128,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="128,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
-        <Label x:Name="lblCourse" Content="Course:" HorizontalAlignment="Left" Margin="555,199,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblStream" Content="Stream:" HorizontalAlignment="Left" Margin="555,230,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblGroup" Content="Group:" HorizontalAlignment="Left" Margin="555,261,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCourse" HorizontalAlignment="Left" Margin="609,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-        <TextBox x:Name="txtStream" HorizontalAlignment="Left" Margin="609,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-        <TextBox x:Name="txtGroup" HorizontalAlignment="Left" Margin="609,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
-        <GroupBox x:Name="gbPersonalInfo" Header="Personal Information" Margin="10,10,252,269" IsEnabled="False"/>
-        <GroupBox x:Name="gbStudentInfo" Header="Student Information" Margin="10,170,10,40"/>
-        <Button x:Name="btnTestData" Content="Show Test Data" HorizontalAlignment="Left" Margin="609,56,0,0" VerticalAlignment="Top" Height="26" Width="101" Click="btnTestData_Click"/>
-        <Button x:Name="btnTestDataExit" Content="Exit Test Data" HorizontalAlignment="Left" Margin="609,96,0,0" VerticalAlignment="Top" Height="26" Width="101" Click="btnTestDataExit_Click"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <GroupBox x:Name="gbPersonalInfo" Grid.Column="0" Grid.Row="0" Header="Personal Information" IsEnabled="True" Margin="0,0,209,50" Grid.RowSpan="2">
+                    <Grid x:Name="personalInfoGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblGB1" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"></Label>
+                        <Label x:Name="lblFirstName" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">First name:</Label>
+                        <Label x:Name="lblSurname" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2">Surname:</Label>
+                        <Label x:Name="lblLastName" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3">Last name:</Label>
+                        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left"  TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Column="1" Grid.Row="1"/>
+                        <TextBox x:Name="txtSurname" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Column="1" Grid.Row="2"/>
+                        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Column="1" Grid.Row="3"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="gbStudentInfo" Grid.Column="0" Grid.Row="2" Header="Student Information" Margin="0,0,38,0">
+                    <Grid x:Name="studentInfoGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblGB2" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"></Label>
+                        <Label x:Name="lblFaculty" Content="Faculty:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                        <Label x:Name="lblSpeciality" Content="Specality:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                        <Label x:Name="lblDegree" Content="Degree:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3"/>
+                        <Label x:Name="lblStatus" Content="Status:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4"/>
+                        <Label x:Name="lblFakNumber" Content="Fac. Number:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5"/>
+                        <TextBox x:Name="txtFaculty" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Row="1" Grid.Column="1" />
+                        <TextBox x:Name="txtSpeciality" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Row="2" Grid.Column="1" />
+                        <TextBox x:Name="txtDegree" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Row="3" Grid.Column="1" />
+                        <TextBox x:Name="txtStatus" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Row="4" Grid.Column="1"/>
+                        <TextBox x:Name="txtFakNumber" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="180" Grid.Row="5" Grid.Column="1"/>
+                        <Label x:Name="lblCourse" Content="Course:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1"/>
+                        <Label x:Name="lblStream" Content="Stream:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2"/>
+                        <Label x:Name="lblGroup" Content="Group:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="2" Grid.Row="3" />
+                        <TextBox x:Name="txtCourse" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" Grid.Column="3" Grid.Row="1"/>
+                        <TextBox x:Name="txtStream" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" Grid.Column="3" Grid.Row="2"/>
+                        <TextBox x:Name="txtGroup" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" Grid.Column="3" Grid.Row="3"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <GroupBox x:Name="gbPhto" Grid.Column="1" Grid.Row="1" Header="Profile Picture" IsEnabled="True">
+                    <Grid x:Name="photoGrid">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="profilePicture.png"/>
+                        </Grid.Background>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </Grid>
+        <Button x:Name="btnTestData" Content="Show Test Data" HorizontalAlignment="Left" Margin="638,44,0,0" VerticalAlignment="Top" Height="26" Width="102" Click="btnTestData_Click"/>
+        <Button x:Name="btnTestDataExit" Content="Exit Test Data" HorizontalAlignment="Left" Margin="638,90,0,0" VerticalAlignment="Top" Height="26" Width="101" Click="btnTestDataExit_Click"/>
     </Grid>
 </Window>
