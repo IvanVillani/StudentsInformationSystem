@@ -20,10 +20,10 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Int32 btnClickCounter;
         public MainWindow()
         {
             InitializeComponent();
+
             this.Title = "Student information system";
             btnTestDataExit.Visibility = Visibility.Hidden;
         }
