@@ -122,5 +122,12 @@ namespace StudentInfoSystem
             btnTestDataExit.Visibility = Visibility.Hidden;
             btnTestData.Visibility = Visibility.Visible;
         }
+
+        private void btnValidate_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow(this);
+
+            loginWindow.ShowDialog();
+        }
     }
 }

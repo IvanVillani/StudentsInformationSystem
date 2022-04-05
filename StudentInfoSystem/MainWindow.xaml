@@ -85,6 +85,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
                     <RowDefinition Height="200"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="gbPhto" Grid.Column="1" Grid.Row="1" Header="Profile Picture" IsEnabled="True">
@@ -94,6 +96,7 @@
                         </Grid.Background>
                     </Grid>
                 </GroupBox>
+                <Button x:Name="btnValidate" Grid.Column="1" Grid.Row="5" FontSize="10" FontWeight="ExtraBlack" Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="80" Click="btnValidate_Click"/>
             </Grid>
         </Grid>
         <Button x:Name="btnTestData" Content="Show Test Data" HorizontalAlignment="Left" Margin="638,44,0,0" VerticalAlignment="Top" Height="26" Width="102" Click="btnTestData_Click"/>

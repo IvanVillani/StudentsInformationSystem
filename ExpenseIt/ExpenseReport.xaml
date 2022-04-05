@@ -38,7 +38,7 @@
                 <Label Grid.Column="0" Grid.Row="0" Foreground="White" FontSize="12" Background="Purple">Expense type</Label>
                 <Label Grid.Column="1" Grid.Row="0" Foreground="White" FontSize="12" Background="Purple">Amount</Label>
             </Grid>-->
-            <DataGrid Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=Expenses}" AutoGenerateColumns="False" RowHeaderWidth="0" >
+            <DataGrid Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=Expenses}" AutoGenerateColumns="False" CanUserDeleteRows="False" CanUserAddRows="False" ColumnWidth="*" RowHeaderWidth="0" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ExpenseType" Binding="{Binding Path=ExpenseType}" />
                     <DataGridTextColumn Header="Amount" Binding="{Binding Path=ExpenseAmount}"/>
