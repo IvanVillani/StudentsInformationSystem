@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentInfoSystem", "Studen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFhello", "WPFhello\WPFhello.csproj", "{ED24B8BC-6FCF-4B1C-B612-7DCE9A59437D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseIt", "ExpenseIt\ExpenseIt.csproj", "{2853F0AF-20A6-4435-9C6A-2C2B8F3B808F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseIt", "ExpenseIt\ExpenseIt.csproj", "{2853F0AF-20A6-4435-9C6A-2C2B8F3B808F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfExapmle", "WpfExapmle\WpfExapmle.csproj", "{C338B19C-D04D-4863-8A27-3A6BAFFF6CE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyMVVM", "EasyMVVM\EasyMVVM.csproj", "{2128E307-453B-4463-915B-6FBFBCEC5ACC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{2853F0AF-20A6-4435-9C6A-2C2B8F3B808F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2853F0AF-20A6-4435-9C6A-2C2B8F3B808F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2853F0AF-20A6-4435-9C6A-2C2B8F3B808F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C338B19C-D04D-4863-8A27-3A6BAFFF6CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C338B19C-D04D-4863-8A27-3A6BAFFF6CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C338B19C-D04D-4863-8A27-3A6BAFFF6CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C338B19C-D04D-4863-8A27-3A6BAFFF6CE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2128E307-453B-4463-915B-6FBFBCEC5ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2128E307-453B-4463-915B-6FBFBCEC5ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2128E307-453B-4463-915B-6FBFBCEC5ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2128E307-453B-4463-915B-6FBFBCEC5ACC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
