@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static StudentInfoSystem.LoginInformation;
 
 namespace StudentInfoSystem
 {
@@ -20,47 +21,18 @@ namespace StudentInfoSystem
     public partial class LoginWindow : Window
     {
         private static MainWindow _mainWindow;
+
         public LoginWindow(MainWindow mainWindow)
         {
             _mainWindow = mainWindow;
             InitializeComponent();
-        }
-        public LoginWindow()
-        {
-            InitializeComponent();
+            MyDelegate myDelegate = new MyDelegate(CloseLoginWindow);
+            DataContext = new LoginInformation(_mainWindow, myDelegate);
         }
 
-        private void btnValidateLogin_Click(object sender, RoutedEventArgs e)
+        private void CloseLoginWindow()
         {
-            String username = txtUsername.Text;
-            String password = txtPassword.Password;
-
-            UserLogin.LoginValidation.ActionOnError action = new UserLogin.LoginValidation.ActionOnError(ReportError);
-
-            UserLogin.LoginValidation validation = new UserLogin.LoginValidation(username, password, action);
-
-            UserLogin.User user = new UserLogin.User();
-
-            bool state = validation.ValidateUserInput(user);
-
-            if (state)
-            {
-                StudentValidation studentValidation = new StudentValidation();
-
-                if (studentValidation.GetStudentDataByUser(user) != null)
-                {
-                    Student student = studentValidation.GetStudentDataByUser(user);
-
-                    _mainWindow.Show();
-                    _mainWindow.FillAllFieldsForStudent(student);
-                    this.Close();
-                }
-            }
-        }
-
-        public static void ReportError(String error)
-        {
-            MessageBox.Show("Login information is not valid, error: " + error);
+            this.Close();
         }
     }
 }

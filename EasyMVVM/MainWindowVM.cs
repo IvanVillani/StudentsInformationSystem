@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace EasyMVVM
 {
-    public class MainWindowVMM : DependencyObject, INotifyPropertyChanged
+    public class MainWindowVM : DependencyObject, INotifyPropertyChanged
     {
         //set up a private class varialbe that holds the value of the _Backing Property
         private ObservableCollection<string> _BackingProperty;

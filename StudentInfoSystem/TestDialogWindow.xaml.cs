@@ -19,11 +19,9 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class TestDialogWindow : Window
     {
-        private static MainWindow _mainWindow;
         public TestDialogWindow()
         {
             InitializeComponent();
-            _mainWindow = new MainWindow();
         }
 
         private void btnTestModeEnabled_Click(object sender, RoutedEventArgs e)
@@ -35,7 +33,8 @@ namespace StudentInfoSystem
 
         private void btnTestModeDisabled_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow(_mainWindow);
+            MainWindow mainWindow = new MainWindow();
+            LoginWindow loginWindow = new LoginWindow(mainWindow);
 
             loginWindow.Show();
             this.Close();

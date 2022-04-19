@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Resources>
-            
+            <vm:MainWindowVM x:Key="vm"></vm:MainWindowVM>
         </Grid.Resources>
     </Grid>
 </Window>
